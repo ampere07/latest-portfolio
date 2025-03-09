@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaGithub, FaEnvelope, FaBars, FaTimes, FaFacebookMessenger, FaPhone } from 'react-icons/fa';
+import { FaGithub, FaEnvelope, FaBars, FaTimes, FaFacebookMessenger, FaPhone , FaDownload} from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, Events } from 'react-scroll';
 
@@ -104,6 +104,10 @@ function App() {
       Events.scrollEvent.remove('end');
     };
   }, []);
+  const handleDownloadCV = () => {
+    const cvUrl = '/public/Ampere-CV.pdf';
+    window.open(cvUrl, '_blank');
+  };
 
   return (
     <div className="min-h-screen bg-slate-900">
@@ -203,16 +207,18 @@ function App() {
           </motion.p>
 
           {/* Download CV Button */}
-          <motion.a
-            href="/CV.pdf"
-            download="Ampere-CV.pdf"
-            className="mt-6 inline-block px-6 py-3 bg-blue-500 text-white text-lg font-medium rounded-lg shadow-md hover:bg-blue-600 transition-colors"
+          <motion.button
+            onClick={handleDownloadCV}
+            className="px-8 py-3 bg-blue-600 text-white rounded-full flex items-center justify-center gap-2 mx-auto hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-blue-500/20"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
+            <FaDownload className="text-lg" />
             Download CV
-          </motion.a>
+          </motion.button>
         </motion.div>
       </section>
 

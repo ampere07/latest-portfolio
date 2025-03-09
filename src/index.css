@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0f172a;
+  --primary: #3b82f6;
+  --secondary: #60a5fa;
+  --text: #f8fafc;
+  --muted: #64748b;
+}
+
+body {
+  @apply bg-slate-900 text-slate-50;
+  font-family: 'Inter', sans-serif;
+}
+
+.skill-circle {
+  @apply relative w-20 h-20 rounded-full border-4 border-slate-700 flex items-center justify-center;
+  background: #1e293b;
+}
+
+.project-card {
+  @apply bg-slate-800 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20;
+}
+
+.retro-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.retro-button {
+  @apply px-6 py-3 bg-blue-600 text-white rounded-lg transition-all duration-300 
+         hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/50 
+         flex items-center justify-center gap-2 font-medium;
+}
+
+.nav-link {
+  @apply text-slate-300 hover:text-blue-500 transition-colors duration-200 
+         px-4 py-2 rounded-lg hover:bg-slate-800/50;
+}
+
+.nav-link.active {
+  @apply text-blue-500 bg-slate-800/50;
+}
+
+section {
+  @apply scroll-mt-20;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile menu animation */
+.mobile-menu {
+  @apply transform transition-transform duration-300;
+}
+
+.mobile-menu.open {
+  @apply translate-x-0;
+}
+
+.mobile-menu.closed {
+  @apply -translate-x-full;
+}
+
+/* Skill circle animation */
+.skill-circle::before {
+  content: '';
+  @apply absolute inset-0 rounded-full;
+  background: conic-gradient(from 0deg, var(--primary) var(--percentage), transparent var(--percentage));
+}

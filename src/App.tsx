@@ -105,8 +105,12 @@ function App() {
     };
   }, []);
   const handleDownloadCV = () => {
-    const cvUrl = '/public/Ampere-CV.pdf';
-    window.open(cvUrl, '_blank');
+    const link = document.createElement('a');
+    link.href = '/public/Ampere-CV.pdf';
+    link.download = 'Ampere-CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (

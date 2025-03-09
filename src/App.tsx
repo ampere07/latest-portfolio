@@ -204,7 +204,7 @@ function App() {
 
           {/* Download CV Button */}
           <motion.a
-            href="./assets/CV.pdf"
+            href="./assets/Ampere-CV.pdf"
             download="Raven_Ampere_CV.pdf"
             className="mt-6 inline-block px-6 py-3 bg-blue-500 text-white text-lg font-medium rounded-lg shadow-md hover:bg-blue-600 transition-colors"
             initial={{ opacity: 0, y: 20 }}

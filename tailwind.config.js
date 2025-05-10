@@ -2,16 +2,7 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {
-      colors: {
-        primary: 'var(--primary)',
-        secondary: 'var(--secondary)',
-        background: 'var(--background)',
-      },
-      animation: {
-        'bounce-slow': 'bounce 3s linear infinite',
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };

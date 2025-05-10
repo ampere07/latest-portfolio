@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import PageTransition from '../components/PageTransition';
 import SectionTitle from '../components/SectionTitle';
 import PixelatedImage from '../components/PixelatedImage';
+import profilePic from "../assets/profile-pic.png";
 
 const AboutPage: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ const AboutPage: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             <PixelatedImage 
-              src="/assets/profile-pic.png" 
+              src={profilePic} 
               alt="Profile"
               className="mb-6"
             />

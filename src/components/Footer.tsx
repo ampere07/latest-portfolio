@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Facebook, Github } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -35,17 +35,12 @@ const Footer: React.FC = () => {
           <div className="text-center md:text-right">
             <h3 className="text-[#fbd000] text-xl mb-4">CONNECT</h3>
             <div className="flex justify-center md:justify-end space-x-4">
-              <a href="#" className="text-white hover:text-[#4166f5] transition">
+              <a href="https://github.com/ampere07" className="text-white hover:text-[#4166f5] transition">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="#" className="text-white hover:text-[#4166f5] transition">
-                <Linkedin className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-white hover:text-[#4166f5] transition">
-                <Twitter className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-white hover:text-[#4166f5] transition">
-                <Mail className="w-6 h-6" />
+
+              <a href="https://www.facebook.com/RavenRav07" className="text-white hover:text-[#4166f5] transition">
+                <Facebook className="w-6 h-6" />
               </a>
             </div>
           </div>

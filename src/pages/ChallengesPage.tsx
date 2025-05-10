@@ -7,7 +7,7 @@ import ArcadeButton from '../components/ArcadeButton';
 const ChallengesPage: React.FC = () => {
   const challenges = [
     {
-      title: 'Learning Curve',
+      title: 'Learning New Frameworks',
       description: 'Mastering new technologies and frameworks while keeping up with the ever-evolving tech landscape.',
       learning: 'Embraced continuous learning and developed a structured approach to acquiring new skills.',
       color: '#e7372c'
@@ -17,12 +17,6 @@ const ChallengesPage: React.FC = () => {
       description: 'Balancing quality with tight deadlines on complex projects with multiple stakeholders.',
       learning: 'Improved time management skills and learned to set realistic expectations and milestones.',
       color: '#4166f5'
-    },
-    {
-      title: 'Remote Collaboration',
-      description: 'Coordinating with team members across different time zones and cultural backgrounds.',
-      learning: 'Enhanced communication skills and learned to use collaboration tools effectively.',
-      color: '#fbd000'
     },
     {
       title: 'Work-Life Balance',

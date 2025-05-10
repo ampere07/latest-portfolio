@@ -25,11 +25,20 @@ const ContactPage: React.FC = () => {
     setStatus('sending');
     
     try {
-      // Simulate sending form data
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      console.log('Form submitted:', formData);
+      const response = await fetch('http://localhost:3001/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
       setStatus('success');
-      // In a real implementation, this would send data to the Node.js backend
+      setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (error) {
       console.error('Error sending message:', error);
       setStatus('error');
@@ -164,7 +173,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-white text-sm font-bold mb-1">EMAIL</h4>
-                    <p className="text-[#fbd000] text-xs">email@example.com</p>
+                    <p className="text-[#fbd000] text-xs">ravenampere0123@gmail.com</p>
                   </div>
                 </div>
                 
@@ -174,7 +183,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-white text-sm font-bold mb-1">PHONE</h4>
-                    <p className="text-[#fbd000] text-xs">(123) 456-7890</p>
+                    <p className="text-[#fbd000] text-xs">09924313554</p>
                   </div>
                 </div>
                 
@@ -184,59 +193,12 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-white text-sm font-bold mb-1">LOCATION</h4>
-                    <p className="text-[#fbd000] text-xs">New York, NY</p>
+                    <p className="text-[#fbd000] text-xs">Las Piñas City, Philippines</p>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-black border-2 border-[#e7372c] p-6">
-                <h4 className="text-white text-sm font-bold mb-3">OFFICE HOURS</h4>
-                <ul className="space-y-2">
-                  <li className="flex justify-between text-xs">
-                    <span className="text-white">Monday - Friday:</span>
-                    <span className="text-[#fbd000]">9:00 AM - 5:00 PM</span>
-                  </li>
-                  <li className="flex justify-between text-xs">
-                    <span className="text-white">Saturday:</span>
-                    <span className="text-[#fbd000]">10:00 AM - 2:00 PM</span>
-                  </li>
-                  <li className="flex justify-between text-xs">
-                    <span className="text-white">Sunday:</span>
-                    <span className="text-[#fbd000]">Closed</span>
-                  </li>
-                </ul>
-              </div>
               
-              <div className="bg-black border-2 border-[#e7372c] p-6">
-                <h4 className="text-white text-sm font-bold mb-3">STAY CONNECTED</h4>
-                <p className="text-white text-xs mb-4">Follow me on social media for updates and more!</p>
-                <div className="grid grid-cols-2 gap-4">
-                  <a 
-                    href="#" 
-                    className="arcade-btn bg-[#4166f5] border-[#fbd000] text-white text-xs flex items-center justify-center"
-                  >
-                    GITHUB
-                  </a>
-                  <a 
-                    href="#" 
-                    className="arcade-btn bg-[#4166f5] border-[#fbd000] text-white text-xs flex items-center justify-center"
-                  >
-                    LINKEDIN
-                  </a>
-                  <a 
-                    href="#" 
-                    className="arcade-btn bg-[#4166f5] border-[#fbd000] text-white text-xs flex items-center justify-center"
-                  >
-                    TWITTER
-                  </a>
-                  <a 
-                    href="#" 
-                    className="arcade-btn bg-[#4166f5] border-[#fbd000] text-white text-xs flex items-center justify-center"
-                  >
-                    INSTAGRAM
-                  </a>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>

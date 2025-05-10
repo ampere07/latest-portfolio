@@ -24,7 +24,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-[#fbd000] text-xl md:text-2xl flex items-center">
-            <span className="transform hover:scale-110 transition duration-200">PLAYER_1</span>
+            <span className="transform hover:scale-110 transition duration-200">AMPERE</span>
             <span className="text-white ml-2 blink">_</span>
           </Link>
           

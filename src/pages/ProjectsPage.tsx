@@ -4,6 +4,12 @@ import { Github, ExternalLink } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
 import SectionTitle from '../components/SectionTitle';
 import PixelatedImage from '../components/PixelatedImage';
+import cafeconnect from "../assets/projects/cafeconnect.png";
+import candleshop from "../assets/projects/candleshop.png";
+import cinesync from "../assets/projects/cinesync.jpg";
+import django from "../assets/projects/django.png";
+import enrollment from "../assets/projects/enrollment.jpg";
+import thesource from "../assets/projects/source.png";
 
 interface Project {
   id: number;
@@ -12,7 +18,6 @@ interface Project {
   technologies: string[];
   image: string;
   githubLink: string;
-  demoLink: string;
 }
 
 const ProjectsPage: React.FC = () => {
@@ -21,62 +26,52 @@ const ProjectsPage: React.FC = () => {
       id: 1,
       name: 'Cafe Connect',
       description: 'A web application for cafe owners to manage their business and for customers to order online.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-      image: '/assets/projects/cafeconnect.png',
-      githubLink: 'https://github.com',
-      demoLink: 'https://demo.com'
+      technologies: ['Java', 'MySQL'],
+      image: cafeconnect,
+      githubLink: 'https://github.com/ampere07/cafeConnect'
     },
     {
       id: 2,
       name: 'Candle Shop',
       description: 'E-commerce website for a candle shop with online payment integration and order tracking.',
-      technologies: ['React', 'Firebase', 'Stripe', 'Tailwind CSS'],
-      image: '/assets/projects/candleshop.png',
-      githubLink: 'https://github.com',
-      demoLink: 'https://demo.com'
+      technologies: ['React', 'Node js Express', 'MongoDB'],
+      image: candleshop,
+      githubLink: 'https://github.com/ampere07/theacandle'
     },
     {
       id: 3,
       name: 'Cine Sync',
       description: 'Movie recommendation app that helps users discover new films based on their preferences.',
-      technologies: ['React Native', 'Redux', 'TheMovieDB API'],
-      image: '/assets/projects/cinesync.jpg',
-      githubLink: 'https://github.com',
-      demoLink: 'https://demo.com'
+      technologies: ['PHP', 'MongoDB'],
+      image: cinesync,
+      githubLink: 'https://github.com/ampere07/CineSynccc'
     },
     {
       id: 4,
       name: 'Django Blog',
       description: 'A feature-rich blog platform built with Django with user authentication and comment system.',
-      technologies: ['Django', 'PostgreSQL', 'Bootstrap', 'AWS'],
-      image: '/assets/projects/django.png',
-      githubLink: 'https://github.com',
-      demoLink: 'https://demo.com'
+      technologies: ['Django'],
+      image: django,
+      githubLink: 'https://github.com/ampere07/group3-django-'
     },
     {
       id: 5,
       name: 'Enrollment System',
       description: 'Student enrollment system for educational institutions with course management.',
-      technologies: ['PHP', 'MySQL', 'jQuery', 'Bootstrap'],
-      image: '/assets/projects/enrollment.jpg',
-      githubLink: 'https://github.com',
-      demoLink: 'https://demo.com'
+      technologies: ['React', 'Larvel', 'MySQL'],
+      image: enrollment,
+      githubLink: 'https://github.com/Daves03/Project'
+    },
+    {
+      id: 6,
+      name: 'The Source',
+      description: 'Suppiler of ingridients.',
+      technologies: ['Python'],
+      image: thesource,
+      githubLink: 'https://github.com/ampere07/theSource'
     },
   ]);
 
-  const addProject = () => {
-    const newProject: Project = {
-      id: projects.length + 1,
-      name: 'Jump Game',
-      description: 'A Mario-inspired platform game built with JavaScript and HTML Canvas.',
-      technologies: ['JavaScript', 'HTML Canvas', 'CSS', 'Web Audio API'],
-      image: '/assets/projects/jump.png',
-      githubLink: 'https://github.com',
-      demoLink: 'https://demo.com'
-    };
-    
-    setProjects([...projects, newProject]);
-  };
 
   return (
     <PageTransition>
@@ -85,14 +80,9 @@ const ProjectsPage: React.FC = () => {
         
         <div className="mb-8 text-center">
           <p className="text-white text-sm mb-4">
-            Check out my portfolio of projects. Each one represents a unique challenge and learning experience.
+            This is my projects
           </p>
-          <button 
-            onClick={addProject}
-            className="arcade-btn bg-[#fbd000] border-[#e7372c] text-black hover:bg-[#ffdc33]"
-          >
-            ADD PROJECT (DEMO)
-          </button>
+        
         </div>
 
         <motion.div 
@@ -143,14 +133,6 @@ const ProjectsPage: React.FC = () => {
                     className="arcade-btn bg-[#4166f5] border-[#fbd000] text-white flex items-center text-xs px-3 py-1"
                   >
                     <Github size={14} className="mr-1" /> CODE
-                  </a>
-                  <a 
-                    href={project.demoLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="arcade-btn bg-[#e7372c] border-[#fbd000] text-white flex items-center text-xs px-3 py-1"
-                  >
-                    <ExternalLink size={14} className="mr-1" /> DEMO
                   </a>
                 </div>
               </div>

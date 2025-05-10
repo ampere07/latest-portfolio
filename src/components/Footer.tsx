@@ -7,10 +7,10 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center md:text-left">
-            <h3 className="text-[#fbd000] text-xl mb-4">PLAYER_1</h3>
+            <h3 className="text-[#fbd000] text-xl mb-4">AMPERE</h3>
             <p className="text-white text-xs leading-relaxed">
-              Personal portfolio with retro arcade style. <br />
-              Made with React and pixel perfect design.
+              Personal portfolio<br />
+              
             </p>
           </div>
           
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
         
         <div className="mt-8 pt-4 border-t border-[#4166f5] text-center">
           <p className="text-white text-xs">
-            &copy; {new Date().getFullYear()} PLAYER_1. ALL RIGHTS RESERVED.
+            &copy; {new Date().getFullYear()} AMPERE. ALL RIGHTS RESERVED.
           </p>
           <div className="mt-2 pixelated">
             <span className="inline-block w-4 h-4 bg-[#e7372c] mx-1"></span>

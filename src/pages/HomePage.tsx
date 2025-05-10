@@ -10,7 +10,7 @@ const HomePage: React.FC = () => {
 
   const menuItems = [
     { path: '/about', label: 'ABOUT ME', icon: <User size={24} />, color: 'red' },
-    { path: '/skills', label: 'SKILLS & CERTS', icon: <Award size={24} />, color: 'blue' },
+    { path: '/skills', label: 'SKILLS', icon: <Award size={24} />, color: 'blue' },
     { path: '/projects', label: 'PROJECTS', icon: <Code size={24} />, color: 'green' },
     { path: '/challenges', label: 'CHALLENGES', icon: <GameController size={24} />, color: 'yellow' },
     { path: '/future-plans', label: 'FUTURE PLANS', icon: <Book size={24} />, color: 'red' },
@@ -28,7 +28,7 @@ const HomePage: React.FC = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            PLAYER_1
+            AMPERE
           </motion.h1>
           <motion.div 
             className="h-1 w-32 bg-[#e7372c] mx-auto mb-6"
@@ -42,7 +42,7 @@ const HomePage: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            WEB DEVELOPER & DESIGNER
+            3RD YEAR STUDENT
           </motion.p>
         </div>
 

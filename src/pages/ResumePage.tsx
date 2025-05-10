@@ -48,8 +48,8 @@ const ResumePage: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="border-b-2 border-black pb-4 mb-6">
-              <h2 className="text-2xl font-bold mb-2">PLAYER_1</h2>
-              <p className="text-sm mb-2">Web Developer & Designer</p>
+              <h2 className="text-2xl font-bold mb-2">AMPERE</h2>
+              <p className="text-sm mb-2">3RD YEAR STUDENT</p>
               <div className="flex flex-wrap gap-2 text-xs">
                 <span>email@example.com</span>
                 <span>•</span>
